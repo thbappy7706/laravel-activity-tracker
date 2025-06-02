@@ -1,10 +1,5 @@
 # Laravel Activity Tracker
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/thbappy7706/laravel-activity-tracker.svg?style=flat-square)](https://packagist.org/packages/thbappy7706/laravel-activity-tracker)
-[![Total Downloads](https://img.shields.io/packagist/dt/thbappy7706/laravel-activity-tracker.svg?style=flat-square)](https://packagist.org/packages/thbappy7706/laravel-activity-tracker)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/thbappy7706/laravel-activity-tracker/run-tests?label=tests)](https://github.com/thbappy7706/laravel-activity-tracker/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/thbappy7706/laravel-activity-tracker/Check%20&%20fix%20styling?label=code%20style)](https://github.com/thbappy7706/laravel-activity-tracker/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-
 A comprehensive Laravel package for tracking user activity, online status, and "last seen" functionality. Perfect for applications that need to display user presence, activity monitoring, or implement features like "who's online" lists.
 
 ## Features
