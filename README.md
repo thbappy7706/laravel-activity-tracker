@@ -200,15 +200,6 @@ To publish this package to Packagist:
 
 4. **Set up auto-update**: Configure GitHub webhook in your repository settings to automatically update Packagist when you push new versions.
 
-## Version Management
-
-Use semantic versioning (SemVer) for releases:
-
-```bash
-# Tag a new version
-git tag v1.0.0
-git push origin v1.0.0
-```
 
 ## Examples
 
