@@ -1,0 +1,41 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create(config('activity-tracker.table_name', 'user_activities'), function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('user_id')->nullable()->index();
+            $table->string('session_id')->nullable()->index();
+            $table->string('ip_address', 45)->nullable();
+            $table->text('user_agent')->nullable();
+            $table->string('route_name')->nullable();
+            $table->text('url')->nullable();
+            $table->timestamp('last_activity')->index();
+            $table->timestamps();
+
+            // Composite indexes for better query performance
+            $table->index(['user_id', 'last_activity']);
+            $table->index(['session_id', 'last_activity']);
+            
+            // Foreign key constraint (optional, uncomment if you want strict referential integrity)
+            // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists(config('activity-tracker.table_name', 'user_activities'));
+    }
+};
